@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+ 
+<!DOCTYPE rdf:RDF [
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+]>
+ 
+<rdf:RDF
+ 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ 	xmlns:owl="http://www.w3.org/2002/07/owl#"
+ 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+ 
+  
+	<owl:Class rdf:about="&owl;Thing"/>
+	<owl:Class rdf:about="Event">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	<owl:Class rdf:about="Object">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+<owl:Class rdf:about="EventType">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	<owl:Class rdf:about="ObjectType">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="ObjectAttributeName">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	<owl:Class rdf:about="ObjectAttributeValue">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	<owl:Class rdf:about="EventAttributeName">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	<owl:Class rdf:about="EventAttributeValue">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+<owl:Class rdf:about="ObjectRelation">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+ 
+<owl:Class rdf:about="ObjectRelationType">
+    	<rdfs:subClassOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+
+ 
+	<owl:ObjectProperty rdf:about="HasEventType">
+    	<rdfs:domain rdf:resource="Event"/>
+    	<rdfs:range rdf:resource="EventType"/>
+	</owl:ObjectProperty>
+   	<owl:ObjectProperty rdf:about="HasEventName">
+ 	   <rdfs:domain rdf:resource="Event"/>
+    	<rdfs:range rdf:resource="EventAttributeName"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="HasEventValue">
+    	<rdfs:domain rdf:resource="EventAttributeName"/>
+    	<rdfs:range rdf:resource="EventAttributeValue"/>
+	</owl:ObjectProperty>
+   
+ 
+	<owl:ObjectProperty rdf:about="HasObjectType">
+    	<rdfs:domain rdf:resource="Object"/>
+    	<rdfs:range rdf:resource="ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="HasObjectName">
+    	<rdfs:domain rdf:resource="Object"/>
+    	<rdfs:range rdf:resource="ObjectAttributeName"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="HasObjectValue">
+    	<rdfs:domain rdf:resource="ObjectAttributeName"/>
+    	<rdfs:range rdf:resource="ObjectAttributeValue"/>
+	</owl:ObjectProperty>
+ 
+ 
+	<owl:DatatypeProperty rdf:about="HasTimestamp">
+    	<rdfs:domain rdf:resource="Event"/>
+    	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+ 
+ 
+ <owl:ObjectProperty rdf:about="HasRelation">
+    	<rdfs:domain rdf:resource="Event"/>
+    	<rdfs:range rdf:resource="Object"/>
+	</owl:ObjectProperty>
+<owl:EquivalentProperty rdf:about="Qualifiers">
+    	<rdfs:domain rdf:resource="Event"/>
+    	<rdfs:range rdf:resource="Object"/>
+
+	</owl:EquivalentProperty>
+
+
+
+	<owl:ObjectProperty rdf:about="HasObjectRelation">
+    	<rdfs:domain rdf:resource="Object"/>
+    	<rdfs:range rdf:resource="ObjectRelation"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType">
+    	<rdfs:domain rdf:resource="ObjectRelation"/>
+    	<rdfs:range rdf:resource="ObjectRelationType"/>
+	</owl:ObjectProperty>
+ 
+ 
+ 
+<owl:Restriction>
+<owl:onProperty rdf:resource="Qualifier" />
+<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1
+</owl:minCardinality>
+</owl:Restriction>
+<owl:Restriction>
+<owl:onProperty rdf:resource="Qualifier" />
+<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">*
+</owl:maxCardinality>
+</owl:Restriction>
+ 
+ 
+<owl:Restriction>
+<owl:onProperty rdf:resource="HasObjectRelationType" />
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1
+</owl:cardinality>
+</owl:Restriction>
+ 
+<owl:Restriction>
+<owl:onProperty rdf:resource="HasEventType" />
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1
+</owl:cardinality>
+</owl:Restriction>
+<owl:Restriction>
+<owl:onProperty rdf:resource="HasObjectType" />
+<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1
+</owl:cardinality>
+</owl:Restriction>
+ 
+  <owl:DatatypeProperty rdf:about="HasAlphanumericValue">
+    <rdfs:domain rdf:resource="Object"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="HasAlphanumericValue"/>
+        <owl:onDatatype rdf:resource="&xsd;string"/>
+        <owl:pattern>[a-zA-Z0-9]*</owl:pattern>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:DatatypeProperty>
+ 
+ 
+</rdf:RDF>
+
