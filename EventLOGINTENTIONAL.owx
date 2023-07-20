@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+ 
+<!DOCTYPE rdf:RDF [
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+]>
+<rdf:RDF
+ 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ 	           	xmlns:owl="http://www.w3.org/2002/07/owl#"          xmlns:owl="https://raw.githubusercontent.com/sabalati/oced/main/owl%20file.owx">
+  
+
+  	<owl:NamedIndividual rdf:about="Status">
+   	<rdf:type rdf:resource="&owl:Event"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="Status">
+    	<rdfs:domain rdf:resource="&owl;Event"/>
+    	<rdfs:range rdf:resource="&owl;EventType"/>
+	</owl:ObjectProperty>
+   	<owl:ObjectProperty rdf:about="IncidentStatus ">
+ 	   <rdfs:domain rdf:resource="&owl;Event"/>
+    	<rdfs:range rdf:resource="&owl;EventAttributeName"/>
+	</owl:ObjectProperty>
+   
+	<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="&owl;Status"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+	<owl:NamedIndividual rdf:about="Impact">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="Impact">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Impact">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+	 <owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="Impact"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+ <owl:NamedIndividual rdf:about="Owner">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="Owner">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Owner">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="&owl;Owner"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+ <owl:NamedIndividual rdf:about="ConceptName">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="ConceptName">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Name">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Completed">
+    	<rdfs:domain rdf:resource="&owl;ObjectAttributeName"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeValue"/>
+	</owl:ObjectProperty>  
+<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="&owl;ConceptName"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+<owl:NamedIndividual rdf:about="ResourceCountry">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="ResourceCountry">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Country">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="&owl;ResourceCountry"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+<owl:NamedIndividual rdf:about="OrganizationInvolved">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="OrganizationInvolved">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="OrganizationInvolved">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="OrganizationInvolved"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+<owl:NamedIndividual rdf:about="Product">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+
+	<owl:ObjectProperty rdf:about="Product">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="Product">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="Product"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+
+<owl:NamedIndividual rdf:about="LifeCycleTransition">
+   	<rdf:type rdf:resource="&owl:Object"/>
+</owl:NamedIndividual>
+	<owl:ObjectProperty rdf:about="LifeCycleTransition">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectType"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="LifeCycleTransition">
+    	<rdfs:domain rdf:resource="&owl;Object"/>
+    	<rdfs:range rdf:resource="&owl;ObjectAttributeName"/>
+	</owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="HasObjectRelation_SubPropertyOf">
+    	<rdfs:domain rdf:resource="LifeCycleTransition"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+	</owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="HasObjectRelationType_Information">
+    	<rdfs:domain rdf:resource="&owl;ObjectRelation_subpropertyof"/>
+    	<rdfs:range rdf:resource="&owl;ObjectRelationType_subpropertyof"/>
+	</owl:ObjectProperty>
+
+</rdf:RDF>
+
+
+
+
+
+
